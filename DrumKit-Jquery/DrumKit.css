@@ -1,8 +1,5 @@
 html {
-  font-size: 10px;
-  background: url(drums.jpg) left center;
-  background-size: cover;
-  border-image-repeat: no-repeat !important;
+  //  font-size: 10px;
 }
 
 body, html {
@@ -42,6 +39,10 @@ body, html {
 kbd {
   display: block;
   font-size: 4rem;
+  background-color: transparent !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  webkit-box-shadow: none !important;
 }
 
 .sound {
@@ -50,3 +51,48 @@ kbd {
   letter-spacing: .1rem;
   color: #ffdb4d;
 }
+
+.coverPhoto {
+  background: url(drums.jpg) left center;
+  background-size: cover;
+}
+
+.marginLR {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+@media only screen and (max-width: 767px) and (min-width: 320px) {
+  .key {
+    border: 0.2rem solid black;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    font-size: .5rem;
+    padding: 1rem .5rem;
+    transition: all .07s ease;
+    width: 9rem;
+    height: 9rem;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    text-shadow: 0 0 0.5rem black;
+  }
+  kbd {
+    display: block;
+    font-size: 4rem;
+    background-color: transparent !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    webkit-box-shadow: none !important;
+  }
+  .sound {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: #ffdb4d;
+  }
+}
+
+}
+
+/* Portrait phones and smaller */
