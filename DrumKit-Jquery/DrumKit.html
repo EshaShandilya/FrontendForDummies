@@ -16,19 +16,26 @@
       function wireEvents() {
         $(document).keydown(function(event) {
           var key = event.which;
-          console.log("KeyCode: " + key);
-          var audio = $('audio[data-key=' + key + ']');
-          var div = $('div[data-key=' + key + ']');
-          console.log("Div: " + div[0]);
-          console.log("Audio: " + audio[0]);
-          if (!audio[0])
-            return;
-          audio[0].play();
-          audio[0].currentTime = 0;
-          $(div).addClass('playing').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function() {
-            $(this).removeClass('playing');
-          });
+          playDrum(key);
+        });
 
+        $('.key').click(function(event) {
+          var key = $(this).attr('data-key');
+          playDrum(key);
+        });
+
+      }
+
+      function playDrum(key) {
+
+        var audio = $('audio[data-key=' + key + ']');
+        var div = $('div[data-key=' + key + ']');
+        if (!audio[0])
+          return;
+        audio[0].play();
+        audio[0].currentTime = 0;
+        $(div).addClass('playing').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function() {
+          $(this).removeClass('playing');
         });
       }
 
