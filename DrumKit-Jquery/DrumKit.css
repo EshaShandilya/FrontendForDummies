@@ -1,7 +1,8 @@
 html {
   font-size: 10px;
-  background: url(drums.jpg) center;
+  background: url(drums.jpg) left center;
   background-size: cover;
+  border-image-repeat: no-repeat !important;
 }
 
 body, html {
